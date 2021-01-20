@@ -1,0 +1,1 @@
+export const selectDirectory = stores => stores.directory.directories
