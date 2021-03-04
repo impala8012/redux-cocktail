@@ -1,8 +1,9 @@
 import React from "react";
+import RecipeList from "../../components/RecipeList";
 
 const RecipePage = () => {
     return (
-        <div>網頁建構中請稍後...</div>
+        <RecipeList />
     )
 }
 

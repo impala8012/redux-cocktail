@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { addItem } from "../../redux/reducers/cart/cartAction";
 import styled from "styled-components";
 import CustomButton from "../CustomButton";
+import { MEDIA_QUERY_LG,MEDIA_QUERY_MD } from "../../constants/style";
 
 const ProductContainer = styled.div`
   width: 22vw;
@@ -22,6 +23,13 @@ const ProductContainer = styled.div`
       display: flex;
     }
   }
+  ${MEDIA_QUERY_LG} {
+    width: 24vw;
+  }
+  ${MEDIA_QUERY_MD} {
+    width: 65%;
+    height: 250px;
+  }
 `;
 
 const BackgroundImage = styled.div`
@@ -31,6 +39,7 @@ const BackgroundImage = styled.div`
   background-position: center;
   margin-bottom: 5px;
   background-image: ${({ imageUrl }) => `url(${imageUrl})`};
+
 `;
 
 const ProductFooterContainer = styled.div`
@@ -44,11 +53,25 @@ const ProductFooterContainer = styled.div`
 const NameContainer = styled.span`
   width: 50%;
   margin-bottom: 15px;
+  ${MEDIA_QUERY_LG} {
+    font-size: 14px;
+  }
+  ${MEDIA_QUERY_MD} {
+    margin-right: 10px;
+    font-size: 12px;
+  }
 `;
 
 const PriceContainer = styled.span`
   width: 10%;
   text-align: right;
+  ${MEDIA_QUERY_LG} {
+    font-size: 14px;
+  }
+  ${MEDIA_QUERY_MD} {
+    width: 10%;
+    font-size: 12px;
+  }
 `;
 
 const AddButton = styled(CustomButton)`

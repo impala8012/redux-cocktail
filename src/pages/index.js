@@ -8,6 +8,7 @@ import ProductPage from "./ProductPage";
 import RecipePage from "./RecipePage";
 import RegistorPage from "./RegistorPage";
 import ForumPage from "./ForumPage";
+import RecipePostPage from "./RecipePostPage";
 
 export {
   AboutPage,
@@ -20,4 +21,5 @@ export {
   RecipePage,
   RegistorPage,
   ForumPage,
+  RecipePostPage,
 };
