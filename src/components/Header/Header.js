@@ -5,9 +5,10 @@ import styled from "styled-components";
 import { selectCurrentUser } from "../../redux/reducers/users/userSelector";
 import { selseCartIsHidden } from "../../redux/reducers/cart/cartSelector";
 import { auth } from "../../firebase/utils";
+import {MEDIA_QUERY_LG, MEDIA_QUERY_MD} from "../../constants/style"
 import CartIcon from "../CartIcon";
 import CartDropdown from "../CartDropdown";
-const HaederContainer = styled.div`
+const HeaderContainer = styled.div`
   height: 64px;
   display: flex;
   justify-content: space-between;
@@ -19,6 +20,10 @@ const HaederContainer = styled.div`
   left: 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   padding: 0 32px;
+
+  ${MEDIA_QUERY_MD}{
+    padding: 0;
+  }
 `;
 
 const Brand = styled.a`
@@ -27,6 +32,15 @@ const Brand = styled.a`
   display: flex;
   align-items: center;
   cursor: pointer;
+
+  ${MEDIA_QUERY_LG} {
+    font-size: 24px;
+  }
+  ${MEDIA_QUERY_MD} {
+    font-size: 18px;
+    width: 75px;
+    margin-left:5px;
+  }
 `;
 
 const Navbarlist = styled.div`
@@ -34,16 +48,29 @@ const Navbarlist = styled.div`
   align-items: center;
   height: 64px;
   width: 300px;
+
+  ${MEDIA_QUERY_MD} {
+    height: 64px;
+    width: 200px;
+    font-size: 16px;
+  }
 `;
 
 const LeftHeader = styled.div`
-  display:flex;
+  display: flex;
   justify-content: center;
   height: 100%;
   padding: 25px;
 
+  ${MEDIA_QUERY_MD} {
+    padding: 0;
+  }
   ${Navbarlist} {
     margin-left: 32px;
+
+    ${MEDIA_QUERY_MD} {
+      margin-left: 16px;
+    }
   }
 `;
 
@@ -56,6 +83,10 @@ const Nav = styled(Link)`
   cursor: pointer;
   color: black;
   text-decoration: none;
+
+  ${MEDIA_QUERY_MD} {
+    width: 75px;
+  }
 
   ${(props) =>
     props.$active &&
@@ -87,7 +118,7 @@ const Header = () => {
   const location = useLocation();
   const history = useHistory();
   return (
-    <HaederContainer>
+    <HeaderContainer>
       <LeftHeader>
         <Brand onClick={()=>history.push("/")}>理性飲酒</Brand>
         <Navbarlist>
@@ -106,9 +137,9 @@ const Header = () => {
         </Navbarlist>
       </LeftHeader>
       <Navbarlist>
-        <Nav $active={location.pathname === "/forum"} to="/forum">
+        {/* <Nav $active={location.pathname === "/forum"} to="/forum">
           討論區
-        </Nav>
+        </Nav> */}
         {currentUser ? (
           <Logout onClick={() => auth.signOut()}>登出</Logout>
         ) : (
@@ -119,7 +150,7 @@ const Header = () => {
         <CartIcon />
       </Navbarlist>
       {isHidden ? null : <CartDropdown />}
-    </HaederContainer>
+    </HeaderContainer>
   );
 }
 

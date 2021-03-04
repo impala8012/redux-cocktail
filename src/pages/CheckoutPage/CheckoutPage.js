@@ -4,6 +4,7 @@ import { selectCartItems } from "../../redux/reducers/cart/cartSelector";
 import styled from "styled-components";
 import CheckoutItem from "../../components/CheckoutItem";
 import StripeButton from "../../components/StripButton";
+import { MEDIA_QUERY_MD,MEDIA_QUERY_LG } from "../../constants/style";
 
 const CheckoutPageContainer = styled.div`
   width: 55%;
@@ -16,6 +17,9 @@ const CheckoutPageContainer = styled.div`
   button {
     margin-left: auto;
     margin-top: 50px;
+  }
+  ${MEDIA_QUERY_MD} {
+    width: 100%;
   }
 `;
 
@@ -36,6 +40,13 @@ const HeaderBlockContainer = styled.div`
   }
   &:last-child {
     width: 7%;
+
+    ${MEDIA_QUERY_LG} {
+      width: 12%;
+    }
+    ${MEDIA_QUERY_MD} {
+      width: 20%;
+    }
   }
 `;
 
@@ -43,6 +54,9 @@ const Total = styled.div`
   margin-top: 30px;
   margin-left: auto;
   font-size: 36px;
+  ${MEDIA_QUERY_MD} {
+    font-size: 22px;
+  }
 `;
 
 const TestMessage = styled.div`
@@ -50,6 +64,9 @@ const TestMessage = styled.div`
   margin-top: 40px;
   font-size: 24px;
   color: red;
+  ${MEDIA_QUERY_MD} {
+    font-size: 18px;
+  }
 `;
 
 const CheckoutPage = () => {

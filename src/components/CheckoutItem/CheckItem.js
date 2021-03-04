@@ -2,6 +2,7 @@ import React from "react";
 import {useDispatch} from "react-redux"
 import {clearItem, addItem, removeItem} from "../../redux/reducers/cart/cartAction"
 import styled from "styled-components";
+import { MEDIA_QUERY_MD } from "../../constants/style";
 
 const CheckoutItemContainer = styled.div`
   width: 100%;
@@ -21,18 +22,33 @@ const ImageContainer = styled.div`
     width: 100%;
     height: 100%;
   }
+  ${MEDIA_QUERY_MD} {
+    padding-right: 0;
+    margin-left:10px;
+  }
 `;
 
 const TextContainer = styled.span`
   width: 22%;
   margin-left: 2px;
+  ${MEDIA_QUERY_MD} {
+    margin: 0px;
+    width: 20%;
+    margin-right:2px;
+  }
 `;
 
 const QuantityContainer = styled(TextContainer)`
   display: flex;
-
+  ${MEDIA_QUERY_MD} {
+    margin-left: 2px;
+  }
   span {
     margin: 0 10px;
+
+    ${MEDIA_QUERY_MD} {
+      margin: 0 5px;
+    }
   }
 
   div {
@@ -43,6 +59,9 @@ const QuantityContainer = styled(TextContainer)`
 const RemoveButtonContainer = styled.div`
   padding-left: 12px;
   cursor: pointer;
+  ${MEDIA_QUERY_MD} {
+    padding: 0;
+  }
 `;
 
 // UTF-8 dingbats unicode 8 windings
