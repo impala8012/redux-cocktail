@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/redux-cocktail/static/css/main.67aef048.chunk.css",
-    "main.js": "/redux-cocktail/static/js/main.4e2c3145.chunk.js",
-    "main.js.map": "/redux-cocktail/static/js/main.4e2c3145.chunk.js.map",
+    "main.js": "/redux-cocktail/static/js/main.4003a178.chunk.js",
+    "main.js.map": "/redux-cocktail/static/js/main.4003a178.chunk.js.map",
     "runtime-main.js": "/redux-cocktail/static/js/runtime-main.5a27f637.js",
     "runtime-main.js.map": "/redux-cocktail/static/js/runtime-main.5a27f637.js.map",
-    "static/js/2.10297b25.chunk.js": "/redux-cocktail/static/js/2.10297b25.chunk.js",
-    "static/js/2.10297b25.chunk.js.map": "/redux-cocktail/static/js/2.10297b25.chunk.js.map",
+    "static/js/2.a515fecd.chunk.js": "/redux-cocktail/static/js/2.a515fecd.chunk.js",
+    "static/js/2.a515fecd.chunk.js.map": "/redux-cocktail/static/js/2.a515fecd.chunk.js.map",
     "static/js/3.7b01c243.chunk.js": "/redux-cocktail/static/js/3.7b01c243.chunk.js",
     "static/js/3.7b01c243.chunk.js.map": "/redux-cocktail/static/js/3.7b01c243.chunk.js.map",
     "index.html": "/redux-cocktail/index.html",
     "static/css/main.67aef048.chunk.css.map": "/redux-cocktail/static/css/main.67aef048.chunk.css.map",
-    "static/js/2.10297b25.chunk.js.LICENSE.txt": "/redux-cocktail/static/js/2.10297b25.chunk.js.LICENSE.txt",
+    "static/js/2.a515fecd.chunk.js.LICENSE.txt": "/redux-cocktail/static/js/2.a515fecd.chunk.js.LICENSE.txt",
     "static/media/shopping-bag.a688874f.svg": "/redux-cocktail/static/media/shopping-bag.a688874f.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.5a27f637.js",
-    "static/js/2.10297b25.chunk.js",
+    "static/js/2.a515fecd.chunk.js",
     "static/css/main.67aef048.chunk.css",
-    "static/js/main.4e2c3145.chunk.js"
+    "static/js/main.4003a178.chunk.js"
   ]
 }
